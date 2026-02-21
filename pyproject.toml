@@ -1,0 +1,23 @@
+[project]
+name = "letterboxd2jellyfin"
+version = "1.0.0"
+description = "Quick Python script to convert a letterboxd list nto a Jellyfin-compatible library structure."
+readme = "README.md"
+authors = [
+  { name="Jayden Milne", email="blog@jayd.ml" },
+]
+license = 'AGPL-3.0-or-later'
+requires-python = ">=3.9"
+dependencies = [
+    "letterboxdpy>=6.4.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.2",
+]
+
+
+include = [
+    "*.mp4"
+]
