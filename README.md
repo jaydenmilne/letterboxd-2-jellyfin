@@ -1,13 +1,13 @@
 # letterboxd2jellyfin
 
 Quick Python script to convert a letterboxd list (eg `https://letterboxd.com/matchup/list/scream-ranked/`)
-into a (Jellyfin-compatible library structure[https://jellyfin.org/docs/general/server/media/movies/]
+into a [Jellyfin-compatible library structure](https://jellyfin.org/docs/general/server/media/movies/)
 of stub files.
 
 ## Install
 
 ```sh
-pip install letterboxd2jellyfin
+pipx install letterboxd2jellyfin
 ```
 
 ## Why
@@ -21,7 +21,7 @@ This is for the niche use case where you:
 This script will read the list from Letterboxd and copy a stub `.mp4` file to
 the appropriate location.
 
-For example:
+### For example:
 
 ```sh
 $ letterboxd2jellyfin  -o 'deleteme' -url https://letterboxd.com/matchup/list/scream-ranked/

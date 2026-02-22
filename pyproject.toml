@@ -1,23 +1,34 @@
 [project]
 name = "letterboxd2jellyfin"
-version = "1.0.0"
+version = "1.1.0"
 description = "Quick Python script to convert a letterboxd list nto a Jellyfin-compatible library structure."
 readme = "README.md"
 authors = [
   { name="Jayden Milne", email="blog@jayd.ml" },
 ]
 license = 'AGPL-3.0-or-later'
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "letterboxdpy>=6.4.1",
 ]
+
+[project.scripts]
+letterboxd2jellyfin = "letterboxd2jellyfin.__main__:main"
+
+[project.urls]
+homepage = "https://github.com/jaydenmilne/letterboxd-2-jellyfin"
+source = "https://github.com/jaydenmilne/letterboxd-2-jellyfin"
+issues = "https://github.com/jaydenmilne/letterboxd-2-jellyfin/issues"
 
 [dependency-groups]
 dev = [
     "ruff>=0.15.2",
 ]
 
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
 
-include = [
-    "*.mp4"
-]
+
+[tool.uv.build-backend]
+source-include = ["src/letterboxd2jellyfin/bluray.mp4", "src/letterboxd2jellyfin/dvd.mp4"]
